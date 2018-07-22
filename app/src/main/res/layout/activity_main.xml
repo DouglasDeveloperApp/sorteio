@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="paixaoporti.com.br.sorteio.MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="353dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="Gerador de números aleatórios, Escolha um número mínimo e o número máximo!"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="147dp"
+        android:text="Mínimo:"
+        android:textColor="#32CD32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="35dp"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Máximo:"
+        android:textColor="#32CD32"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtMax"
+        tools:layout_editor_absoluteX="85dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/edtMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="gerar"
+        android:text="Gerar"
+        app:layout_constraintEnd_toEndOf="@+id/edtMax"
+        app:layout_constraintTop_toBottomOf="@+id/edtMax"
+        tools:layout_editor_absoluteX="85dp" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@android:dimen/notification_large_icon_height"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</android.support.constraint.ConstraintLayout>
